@@ -1,0 +1,31 @@
+nest new blog-api
+cd blog-api
+npm install @nestjs/axios axios
+npm run start:dev 
+
+# Example API calls:
+# Get current weather
+curl "http://localhost:3000/weather/current?city=London&units=metric"
+
+# Get forecast
+curl "http://localhost:3000/weather/forecast?city=London&units=metric"
+
+# Get weather by coordinates
+curl "http://localhost:3000/weather/coordinates?lat=51.5074&lon=0.1278&units=metric" 
+
+# Get all posts
+curl http://localhost:3000/blog/posts
+
+# Get specific post
+curl http://localhost:3000/blog/posts/1
+
+# Get post comments
+curl http://localhost:3000/blog/posts/1/comments
+
+# Get all users
+curl http://localhost:3000/blog/users
+
+# Get user posts
+curl http://localhost:3000/blog/users/1/posts 
+
+mkdir -p public/css public/js 
